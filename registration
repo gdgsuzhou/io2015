@@ -1,0 +1,416 @@
+
+<!--
+Copyright 2015 Google Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+  http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<!doctype html>
+<html lang="en" itemscope itemtype="http://schema.org/Event">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Google I/O 2015 brings together developers for an immersive, two-day experience focused on exploring the next generation of technology, mobile and beyond. Join us online or in person May 28-29, 2015.">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1">
+  <meta name="google-site-verification" content="AdXcVeRpEoy56o6g9c0lls3IiAATCVtB45HWJFwZmsM" />
+  <title>Registration</title>
+
+
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="theme-color" content="#eceff1">
+
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="images/touch/homescreen192.png">
+
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Google I/O 2015">
+
+
+  <link rel="shortcut icon" href="images/touch/homescreen72-fav.png">
+  <link rel="apple-touch-icon" href="images/touch/homescreen48.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/touch/homescreen72.png">
+  <link rel="apple-touch-icon" sizes="96x96" href="images/touch/homescreen96.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/touch/homescreen144.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="images/touch/homescreen192.png">
+
+
+  <meta name="msapplication-TileImage" content="images/touch/homescreen144.png">
+  <meta name="msapplication-TileColor" content="#eceff1">
+  <meta name="msapplication-tap-highlight" content="no">
+
+
+  <meta itemprop="name" content="Google I/O 2015">
+  <meta itemprop="description" content="Google I/O 2015 brings together developers for an immersive, two-day experience focused on exploring the next generation of technology, mobile and beyond. Join us online or in person May 28-29, 2015.">
+  <meta itemprop="image" content="/io2015/images/io15-color.png">
+
+  <meta itemprop="startDate" content="2015-05-28T16:00:00Z">
+  <meta itemprop="endDate" content="2015-05-30T00:00:00Z">
+
+
+  <meta property="og:title" content="Google I/O 2015">
+  <meta property="og:site_name" content="Google I/O 2015">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/io2015">
+  <meta property="og:description" content="Google I/O 2015 brings together developers for an immersive, two-day experience focused on exploring the next generation of technology, mobile and beyond. Join us online or in person May 28-29, 2015.">
+  <meta property="og:type" content="Event">
+  <meta property="og:image" content="/io2015/images/io15-color.png">
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@googledevs">
+  <meta name="twitter:title" content="Google I/O 2015">
+  <meta name="twitter:description" content="Google I/O 2015 brings together developers for an immersive, two-day experience focused on exploring the next generation of technology, mobile and beyond. Join us online or in person May 28-29, 2015.">
+  <meta name="twitter:image:src" content="/io2015/images/io15-color.png">
+
+
+  <script>
+    window.ENV = "prod";
+  </script>
+  <script src="scripts/analytics.js"></script>
+  <script>
+  (function() {
+    "use strict";
+
+
+    window.onerror = function(message, file, lineNumber, columnNumber, error) {
+
+      try {
+
+        if (error !== undefined) {
+          message = error.stack;
+        }
+
+        IOWA.Analytics.trackError(file + ':' + lineNumber, message);
+      } catch (e) {
+
+      }
+    };
+
+
+
+    function getUrlParameter(param) {
+      if (!window.location.search) {
+        return;
+      }
+      var m = new RegExp(param + '=([^&]*)').exec(window.location.search.substring(1));
+      if (!m) {
+        return;
+      }
+      return decodeURIComponent(m[1]);
+    }
+
+
+
+    var ignoreCheck = getUrlParameter('ignore_browser_check') == 'true';
+
+
+
+
+
+    var supported = ignoreCheck || (function whatBrowserYouBe() {
+      var uaString = navigator.userAgent;
+
+
+      var msie = /MSIE +([\d\.]+)/.exec(uaString);
+      if (msie && msie[1]) {
+        if (msie[1] === '7.0') {
+          var tridentVersion = /Trident\/(\d.\d)/.exec(uaString);
+          if (tridentVersion && tridentVersion[1]) {
+            return parseInt(tridentVersion[1], 10) >= 6;
+          } else {
+            return false;
+          }
+        } else {
+          return parseInt(msie[1], 10) >= 10;
+        }
+      }
+
+      if (uaString.indexOf('Chrome') === -1 && uaString.indexOf('Android') !== -1) {
+        return !/^Google/.test(navigator.vendor);
+      }
+
+      if (uaString.indexOf('Opera') !== -1) {
+        return false;
+      }
+
+      return true;
+    })();
+
+    if (!supported) {
+
+      IOWA.Analytics.trackEvent('Polymer', 'unsupported-browser', null, null, function() {
+        window.location = 'upgrade';
+      });
+    }
+  })();
+  </script>
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/main_sd.css" shim-shadowdom>
+
+  <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+  <link rel="import" href="elements/elements.html">
+</head>
+<body id="page-registration">
+
+
+<div class="io-logo-container">
+  <io-logo width="312" height="165" page="registration" class="bg-cyan"></io-logo>
+  <div class="bg-cyan" iologobackground></div>
+</div>
+
+<core-drawer-panel forceNarrow>
+  <div drawer layout vertical>
+    <core-toolbar class="tall bg-cyan">
+      <div class="top io-logo" flex></div>
+      <div class="bottom">
+        <div class="typo-white"><i18n-msg msgid="iodate">May 28 - 29</i18-msg>, 2015</div>
+        <div>San Francisco, CA</div>
+      </div>
+    </core-toolbar>
+    <div class="drawer-panel-content" flex>
+      <core-menu id="drawer-menu" selected="registration" valueattr="label">
+        <paper-item label="home">
+          <a href="./" data-ajax-link data-track-link="nav-drawer-home">
+            <i18n-msg msgid="home">Home</i18n-msg>
+          </a>
+        </paper-item>
+        <paper-item label="about">
+          <a href="about" data-ajax-link data-track-link="nav-drawer-about">
+            <i18n-msg msgid="about">About</i18n-msg>
+          </a>
+        </paper-item>
+        <paper-item label="schedule">
+          <a href="schedule" data-ajax-link data-track-link="nav-drawer-schedule">
+            <i18n-msg msgid="schedule">Schedule</i18n-msg>
+          </a>
+        </paper-item>
+        <paper-item label="onsite">
+          <a href="onsite" data-ajax-link data-track-link="nav-drawer-onsite">
+            <i18n-msg msgid="attend-onsite">Attend Onsite</i18n-msg>
+          </a>
+        </paper-item>
+        <paper-item label="offsite">
+          <a href="offsite" data-ajax-link data-track-link="nav-drawer-offsite">
+            <i18n-msg msgid="attend-offsite">Attend Offsite</i18n-msg>
+          </a>
+        </paper-item>
+        <paper-item label="registration">
+          <a href="registration" data-ajax-link data-track-link="nav-drawer-registration">
+            <i18n-msg msgid="registration">Registration</i18n-msg>
+          </a>
+        </paper-item>
+      </core-menu>
+    </div>
+  </div>
+  <div main>
+
+    <div id="content-container">
+
+    <template is="auto-binding" id="t">
+
+
+      <core-media-query id="mq-phone" query="(min-width:320px) and (max-width:767px)"
+                        queryMatches="{{isPhoneSize}}"></core-media-query>
+      <core-media-query id="mq-tablet" query="(min-width:768px) and (max-width:944px)"
+                        queryMatches="{{isTabletSize}}"></core-media-query>
+      <core-media-query id="mq-desktop" query="(min-width:945px)"
+                        queryMatches="{{isDesktopSize}}"></core-media-query>
+
+      <header class="masthead bg-cyan js-experiment-instrument js-experiment-instrument--no-top-margin" layout vertical>
+        <div class="masthead__ripple">
+          <div class="masthead__ripple__content" id="masthead-ripple"></div>
+        </div>
+        <core-toolbar id="navbar" class="{{ {'core-narrow': isPhoneSize} | tokenList }}">
+          <paper-icon-button icon="menu" core-drawer-toggle></paper-icon-button>
+          <div flex disabled?="{{selectedPage === 'home'}}">
+            <a href="./" data-ajax-link data-track-link="nav-home" data-anim-ripple aria-label="Home">
+              <div class="io-logo"></div>
+            </a>
+          </div>
+          <paper-tabs class="white {{ navBgClass }}" valueattr="label" selected="{{selectedPage}}" role="navigation" link noink>
+            <paper-tab label="about" role="">
+              <a href="about" data-ajax-link data-track-link="nav-about" data-anim-ripple layout horizontal center>
+                <i18n-msg msgid="about">About</i18n-msg>
+              </a>
+            </paper-tab>
+            <paper-tab label="schedule" role="">
+              <a href="schedule" data-ajax-link data-track-link="nav-schedule" data-anim-ripple layout horizontal center>
+                <i18n-msg msgid="schedule">Schedule</i18n-msg>
+              </a>
+            </paper-tab>
+            <paper-tab label="onsite" role="">
+              <a href="onsite" data-ajax-link data-track-link="nav-onsite" data-anim-ripple layout horizontal center>
+                <i18n-msg msgid="attend-onsite">Attend Onsite</i18n-msg>
+              </a>
+            </paper-tab>
+            <paper-tab label="offsite" role="">
+              <a href="offsite" data-ajax-link data-track-link="nav-offsite" data-anim-ripple layout horizontal center>
+                <i18n-msg msgid="attend-offsite">Attend Offsite</i18n-msg>
+              </a>
+            </paper-tab>
+            <paper-tab label="registration" role="">
+              <a href="registration" data-ajax-link data-track-link="nav-registration" data-anim-ripple layout horizontal center>
+                <i18n-msg msgid="registration">Registration</i18n-msg>
+              </a>
+            </paper-tab>
+          </paper-tabs>
+        </core-toolbar>
+        <div class="masthead-container" flex end?="{{!isPhoneSize}}" layout vertical?="{{isPhoneSize}}" horizontal?="{{isDesktopSize || isTabletSize}}">
+          <div class="io-logo large" iologodestination></div>
+          <div class="masthead-meta {{ {transition: pageTransitioningOut} | tokenList }}" layout vertical end-justified?="{{isPhoneSize}}" flex>
+            <template id="template-masthead-container" ref="" bind>
+  <h1><i18n-msg msgid="registration">Registration</i18n-msg></h1>
+</template>
+          </div>
+        </div>
+        <experiment-fab-container mini?="{{isPhoneSize}}" mode="{{mode}}" playmode="{{playmode}}" recordmode="{{recordmode}}" direction="{{direction}}"></experiment-fab-container>
+      </header>
+
+      <main class="io-main {{ {transitionIn: pageTransitioningIn, transitionOut: pageTransitioningOut} | tokenList }}" >
+        <template id="template-content-container" ref="" bind>
+  <div class="card__container card__container--top slide-up">
+    <div class="card js-experiment-visualizer">
+      <div class="card-content">
+        <h3 class="card__title"><i18n-msg msgid="reg-begins">Registration will begin <b>March 17 at 9:00AM PDT</b> and will remain open until <b>March 19 at 5:00PM PDT</b>.</i18n-msg></h3>
+
+      </div>
+      <div class="card-content">
+        <h4 class="card__title"><i18n-msg msgid="tips-ready">Tips to get ready</i18n-msg></h4>
+        <p><i18n-msg msgid="reg-googleacount">Make sure you have a Google account. You'll need to sign into your Google account to begin the registration application process.</i18n-msg></p>
+        <p><i18n-msg msgid="reg-dontworry">Don't worry, there's no rush. You'll have plenty of time to submit your registration application. Applicants will be selected at random to receive the opportunity to purchase one ticket. The order in which applications are received has no bearing on the outcome and remember, only one registration application per person is allowed.</i18n-msg></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-up-delay">
+    <section class="page__section page__section--countdown bg-light-grey js-experiment-instrument">
+      <div class="io-countdown" layout vertical center>
+
+        <template if="{{pageTransitionDone}}">
+          <countdown-timer autostart
+                           bgcolor="#F5F5F5"
+                           date="Mar 17 2015 09:00:00 GMT-0700 (PDT)"
+                           dateadjustment="5" easeintime="500" waittime="300"
+                           easeouttime="400" thresholdInformation="{{thresholdInformation}}"></countdown-timer>
+          <template if="{{ thresholdInformation.thresholdDays }}">
+            <h4 class="countdown-label">
+              <i18n-msg msgid="daysuntilreg">Days until registration begins</i18n-msg>
+            </h4>
+          </template>
+
+          <template if="{{ thresholdInformation.thresholdHours }}">
+            <h4 class="countdown-label">
+              <i18n-msg msgid="hoursuntilreg">Hours until registration begins</i18n-msg>
+            </h4>
+          </template>
+
+          <template if="{{ thresholdInformation.thresholdMinutes }}">
+            <h4 class="countdown-label">
+              <i18n-msg msgid="minutesuntilreg">Minutes until registration begins</i18n-msg>
+            </h4>
+          </template>
+
+          <template if="{{ thresholdInformation.thresholdSeconds }}">
+            <h4 class="countdown-label">
+              <i18n-msg msgid="secondsuntilreg">Seconds until registration begins</i18n-msg>
+            </h4>
+          </template>
+        </template>
+
+      </div>
+    </section>
+  </div>
+</template>
+      </main>
+
+      <footer layout vertical>
+
+        <i18n-msg id="share-text" msgid="share-text" hidden>#io15 brings together devs to explore the next generation of tech and mobile. Join us online or in person May 28-29: https://goo.gl/ZAXVLf</i18n-msg>
+
+        <div layout horizontal justified class="footer-top">
+          <span class="footer-share-links--top">
+            <a href="https://plus.google.com/+GoogleDevelopers" target="_blank" class="share-icon" data-track-link="footer-share-gplus" data-share-type="gplus" on-click="{{openShareWindow}}"><core-icon icon="io:post-gplus"></core-icon></a>
+            <a href="https://twitter.com/googledevs" target="_blank" class="share-icon" data-track-link="footer-share-twitter" data-share-type="twitter" on-click="{{openShareWindow}}"><core-icon icon="io:post-twitter"></core-icon></a>
+          </span>
+          <a href="#" class="footer-backtotop" on-click="{{backToTop}}">Back to the top <core-icon icon="expand-less"></core-icon></a>
+        </div>
+
+        <div class="footer-content" layout horizontal flex?="{{!isPhoneSize}}">
+          <div self-end flex><img src="images/google-logo.svg" alt="Google Logo"></div>
+          <nav layout vertical end justified>
+            <span><a href="faq" data-ajax-link data-track-link="footer-faq">FAQ</a></span>
+            <span><a href="https://www.google.com/events/io" target="_blank" data-track-link="footer-2014-site">I/O 2014</a></span>
+            <paper-dropdown-menu label="Google Developers">
+              <paper-dropdown valign="bottom" halign="right" class="dropdown">
+                <paper-item><a href="https://developers.google.com" target="_blank" data-track-link="footer-link-devsite">developers.google.com</a></paper-item>
+                <paper-item><a href="https://plus.google.com/+GoogleDevelopers" target="_blank" data-track-link="footer-link-gplus">+googledevelopers</a></paper-item>
+                <paper-item><a href="https://twitter.com/googledevs" target="_blank" data-track-link="footer-link-twitter">@googledevs</a></paper-item>
+                <paper-item><a href="http://googledevelopers.blogspot.com/" target="_blank" data-track-link="footer-link-blog">Blog</a></paper-item>
+              </paper-dropdown>
+            </paper-dropdown-menu>
+            <span><a href="https://plus.google.com/u/0/communities/105113874753230740413" target="_blank" data-track-link="footer-community">I/O Community</a></span>
+            <span><a href="https://www.google.com/intl/en/policies/terms/" target="_blank">Privacy</a> &amp; <a href="https://www.google.com/intl/en/policies/terms/" target="_blank">Terms</a></span>
+            <span class="footer-share-links--bottom">
+              <a href="https://plus.google.com/+GoogleDevelopers" target="_blank" class="share-icon"  data-track-link="footer-share-gplus" data-share-type="gplus" on-click="{{openShareWindow}}"><core-icon icon="io:post-gplus"></core-icon></a>
+              <a href="https://twitter.com/googledevs" target="_blank" class="share-icon" data-track-link="footer-share-twitter" data-share-type="twitter" on-click="{{openShareWindow}}"><core-icon icon="io:post-twitter"></core-icon></a>
+            </span>
+          </nav>
+        </div>
+      </footer>
+
+    </template>
+
+    </div>
+  </div>
+</core-drawer-panel>
+
+<io-toast id="toast" duration="9000"></io-toast>
+
+<script src="scripts/site-scripts.js"></script>
+<script>
+(function() {
+
+
+
+  function init() {
+    if (typeof window._initPage == 'function') {
+      window._initPage();
+      window._initPage = null;
+    }
+  }
+
+  function afterImports() {
+
+    if (!IOWA.Elements.Template.pages["registration"]) {
+      IOWA.Elements.Template.pages["registration"] = {};
+    }
+    IOWA.Elements.Template.pages["registration"].title = "Registration";
+
+    init();
+  }
+
+  if (IOWA.Util.supportsHTMLImports) {
+    afterImports();
+  } else {
+    document.addEventListener('polymer-ready', afterImports);
+  }
+
+})();
+</script>
+
+</body>
+</html>
+
