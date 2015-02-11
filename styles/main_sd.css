@@ -1,0 +1,1 @@
+core-drawer-panel::shadow #drawer{z-index:100}core-drawer-panel::shadow #scrim{z-index:5}paper-tabs.white::shadow #selectionBar{background-color:#fff}paper-tabs.white paper-tab::shadow .tab-content{opacity:1 !important}paper-tabs.white paper-tab::shadow #ink{color:rgba(255,255,255,0.5)}footer paper-dropdown-menu::shadow #label{color:inherit}
